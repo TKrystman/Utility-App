@@ -1,0 +1,4 @@
+﻿  Vending machine.cpp
+C:\Users\tobyb\Desktop\Vending machine program\vending machine\vending machine\Vending machine.cpp(27,15): warning C4309: 'initializing': truncation of constant value
+C:\Users\tobyb\Desktop\Vending machine program\vending machine\vending machine\Vending machine.cpp(24,6): warning C4101: 'choiceDrink': unreferenced local variable
+  vending machine.vcxproj -> C:\Users\tobyb\Desktop\Vending machine program\vending machine\Debug\vending machine.exe

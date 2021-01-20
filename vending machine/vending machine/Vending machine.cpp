@@ -20,305 +20,75 @@ int money(int y)
 
 
 int main() {
-	int choiceFood;
-	int choiceDrink;
+	string choiceFood[10] = {"Snickers","Mars Bar","Twix","Cheese and Onion Crisps","Salt and Vinegar Crisps","Prawn Cocktail Crisps","Starbursts","Winegums","KitKat","Cheese Sandwich"};
+	int foodPrice[10] = {70,70,70,100,100,100,80,80,110,130};
+	string foodSearch;
+	string choiceDrink[10] = { "CocaCola","CocaCola Diet","Fanta","Water","Sparkling Water","7UP","Tango Orange","Tango Lemon","Tea","Coffee"};
+	int drinkPrice[10] = {80,80,80,99,100,80,130,130,150,150};
+	string drinkSearch;
 	int select;
 	int moneyInput;
 	char pound = 156;
+	int newMoney;
 	cout << "   -------TOBY'S VENDING MACHINE-------   " << endl;
 	cout << "Input Money (In pennies): " << endl;
 	cin >> moneyInput;
-		cout << "Enter 1 for Food menu or 2 for Drinks menu: ";
+	cout << "Enter 1 for Food menu or 2 for Drinks menu: ";
 	cin >> select;
 	
 	if (select == 1) {
-		cout << "   -------SELECT FOOD FROM OPTIONS BELOW-------   " << endl << " [1][Snickers]{70p} " << endl << " [2][Mars Bar]{70p} " << endl << " [3][Twix]{70p} " << endl << " [4][Cheese and Onion Crisps]{"<< pound << "1} " << endl;
-		cout	<< " [5][Salt and Vinegar Crisps]{" << pound << "1} " << endl << " [6][Prawn Cocktail Crisps]{" << pound << "1} " <<  endl << " [7][Starbursts]{80p} " <<  endl << " [8][Winegums]{80p} " << endl << " [9][KitKat]{" << pound << "1.10} " << endl << " [10][Cheese Sandwich]{" << pound << "1.30} " << endl;
-
-
-		cin >> choiceFood;
-		switch (choiceFood) {
-		case 1:
-			if (moneyInput >= 70) {
-				cout << "Despensing Snickers..." << endl;
+		cout << "   -------SELECT FOOD FROM OPTIONS BELOW (Type out as seen on screen.)-------   " << endl << " [1][Snickers]{70p} " << endl << " [2][Mars Bar]{70p} " << endl << " [3][Twix]{70p} " << endl << " [4][Cheese and Onion Crisps]{" << pound << "1} " << endl;
+		cout << " [5][Salt and Vinegar Crisps]{" << pound << "1} " << endl << " [6][Prawn Cocktail Crisps]{" << pound << "1} " << endl << " [7][Starbursts]{80p} " << endl << " [8][Winegums]{80p} " << endl << " [9][KitKat]{" << pound << "1.10} " << endl << " [10][Cheese Sandwich]{" << pound << "1.30} " << endl;
+		cin >> foodSearch;
+		int termIndex = -1; 
+		
+		for (int i = 0; i < 10; i++) {
+			if (choiceFood[i] == foodSearch) {
+				termIndex = i;
 				
-				cout << "Your Remaining Funds Are: " << moneyInput - 70 << endl;
-			}
-			else {
-			
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			break;
-		case 2:
-			if (moneyInput >= 70) {
-
-			cout << "Despensing Mars Bar..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 70 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
 			}
 			
-
-			break;
-		case 3:
-			if (moneyInput >= 70) {
-
-				cout << "Despensing Twix..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 70 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 4:
-			if (moneyInput >= 100) {
-
-				cout << "Despensing Cheese and Onion Crisps..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 100 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 5:
-			if (moneyInput >= 100) {
-
-				cout << "Despensing Salt and Vinegar Crisps..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 100 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 6:
-			if (moneyInput >= 100) {
-
-				cout << "Despensing Prawn Cocktail Crisps..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 100 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 7:
-			if (moneyInput >= 80) {
-
-				cout << "Despensing Starbursts..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 8:
-			if (moneyInput >= 80) {
-
-				cout << "Despensing Winegums..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 9:
-			if (moneyInput >= 110) {
-
-				cout << "Despensing KitKat..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 110 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		case 10:
-			if (moneyInput >= 130) {
-
-				cout << "Despensing Cheese Sandwich..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 130 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-
-			}
-			
-
-			break;
-		default:
-			cout << "Invalid Choice" << endl;
 		}
+		if (termIndex > -1) {
+			
+			newMoney = moneyInput - foodPrice[termIndex];
+			
+					cout << "Despensing: " << foodSearch << endl << "This costs: " << foodPrice[termIndex] << endl << "You have: " << newMoney << " remaining";
+			
+			}
+
+		
+		
 	}
 	else if (select == 2) {
-		cout << "   -------SELECT DRINKS FROM OPTIONS BELOW-------   " << endl << " [1][CocaCola]{80p} " << endl << " [2][CocaCola Diet]{80p} " << endl << " [3][Fanta]{80p} " << endl << " [4][Water]{99p} " << endl;
+		cout << "   -------SELECT DRINKS FROM OPTIONS BELOW (Type out as seen on screen.)-------   " << endl << " [1][CocaCola]{80p} " << endl << " [2][CocaCola Diet]{80p} " << endl << " [3][Fanta]{80p} " << endl << " [4][Water]{99p} " << endl;
 		cout << " [5][Sparkling Water]{" << pound << "1} " << endl << " [6][7up]{80p} " << endl << " [7][Tango Orange]{" << pound << "1.30} " << endl << " [8][Tango Lemon]{" << pound << "1.30} " << endl << " [9][Tea]{" << pound << "1.50} " << endl << " [10][Coffee]{" << pound << "1.50} " << endl;
-		cin >> choiceFood;
-		switch (choiceFood) {
-		case 1:
-			if (moneyInput >= 80) {
-				cout << "Despensing CocaCola..." << endl;
+		cin >> drinkSearch;
+		int termIndexw = -1;
 
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
+		for (int i = 0; i < 10; i++) { 
+			if (choiceDrink[i] == drinkSearch) {
+				termIndexw = i;
 
 			}
 
+		}
+		if (termIndexw > -1) {
 
+			newMoney = moneyInput - drinkPrice[termIndexw];
 
-			break;
-		case 2:
-			if (moneyInput >= 80) {
-				cout << "Despensing CocaCola Diet..." << endl;
+			cout << "Despensing: " << drinkSearch << endl << "This costs: " << drinkPrice[termIndexw] << endl << "You have: " << newMoney << " remaining";
 
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 3:
-			if (moneyInput >= 80) {
-				cout << "Despensing Fanta..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 4:
-			if (moneyInput >= 99) {
-				cout << "Despensing Water..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 99 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 5:
-			if (moneyInput >= 100) {
-			cout << "Despensing Sparkling Water..." << endl;
-
-			cout << "Your Remaining Funds Are: " << moneyInput - 100 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 6:
-			if (moneyInput >= 80) {
-				cout << "Despensing 7up..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 80 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 7:
-			if (moneyInput >= 130) {
-				cout << "Despensing Tango Orange..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 130 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 8:
-			if (moneyInput >= 130) {
-				cout << "Despensing Tango Lemon..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 130 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 9:
-			if (moneyInput >= 150) {
-				cout << "Despensing Tea..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 150 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		case 10:
-			if (moneyInput >= 150) {
-				cout << "Despensing Coffee..." << endl;
-
-				cout << "Your Remaining Funds Are: " << moneyInput - 150 << endl;
-			}
-			else {
-
-				cout << "INSIFICIANT FUNDS" << endl;
-			}
-			break;
-		default:
-			cout << "Invalid Choice" << endl;
 		}
 	}
 	else {
-	
+
 		cout << endl << "  ...INVALID RESPONSE...CLOSING MACHINE... " << endl;
 		return(0);
 
 	}
-
+		
+	
 
 
 
